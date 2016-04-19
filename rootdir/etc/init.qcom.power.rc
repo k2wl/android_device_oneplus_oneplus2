@@ -1,16 +1,4 @@
 on enable-low-power
-    # disable retention
-    write /sys/module/lpm_levels/system/a53/cpu0/retention/idle_enabled 0
-    write /sys/module/lpm_levels/system/a53/cpu1/retention/idle_enabled 0
-    write /sys/module/lpm_levels/system/a53/cpu2/retention/idle_enabled 0
-    write /sys/module/lpm_levels/system/a53/cpu3/retention/idle_enabled 0
-    write /sys/module/lpm_levels/system/a57/cpu4/retention/idle_enabled 0
-    write /sys/module/lpm_levels/system/a57/cpu5/retention/idle_enabled 0
-    write /sys/module/lpm_levels/system/a57/cpu6/retention/idle_enabled 0
-    write /sys/module/lpm_levels/system/a57/cpu7/retention/idle_enabled 0
-    write /sys/module/lpm_levels/system/a57/a57-l2-retention/idle_enabled 0
-    write /sys/module/lpm_levels/system/a53/a53-l2-retention/idle_enabled 0
-
     # ensure at most one A57 is online when thermal hotplug is disabled
     write /sys/devices/system/cpu/cpu5/online 0
     write /sys/devices/system/cpu/cpu6/online 0
